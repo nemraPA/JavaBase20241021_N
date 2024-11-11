@@ -2,7 +2,7 @@ package com.gmail.gloriyaarmen.lessonsJava.lesson05;
 
 import java.util.Scanner;
 
-public class lesson05homework {
+public class Lesson05Homework {
     public static void main(String[] args) {
 
 //        double value;
