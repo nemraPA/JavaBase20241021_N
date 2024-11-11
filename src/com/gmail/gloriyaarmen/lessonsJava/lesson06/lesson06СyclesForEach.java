@@ -8,25 +8,30 @@ public class lesson06СyclesForEach {
 //        System.out.println("Input max value (1..10): ");
 //        int bound = scanner.nextInt();
 //        forDemo1();
-        forDemo2();
+//        forDemo2();
 
+
+        int i = 1;
+        while (i < 11) {
+            System.out.println(i);
+            i++;
+        }
     }
 
 
-
-        private static void forDemo2() {
-            for (int i = 1; i < 11; i++) {
-                if(i % 2 == 0){
-                    continue;
-                }
-                for (int j = 1; j < 11; j++) {
-                    int value = i * j;
-                    System.out.printf("%5d", value);
-                }
-                System.out.println();
-
+    private static void forDemo2() {
+        for (int i = 1; i < 11; i++) {
+            if (i % 2 == 0) {
+                continue;
             }
+            for (int j = 1; j < 11; j++) {
+                int value = i * j;
+                System.out.printf("%5d", value);
+            }
+            System.out.println();
+
         }
+    }
 
 
     private static void forDemo1() {
