@@ -9,14 +9,25 @@ public class lesson06СyclesForEach {
 //        int bound = scanner.nextInt();
 //        forDemo1();
 //        forDemo2();
+        whileDemo();
 
 
+
+    }
+        private static void whileDemo() {
         int i = 1;
         while (i < 11) {
-            System.out.println(i);
+            int j = 1;
+            while (j < 11) {
+                int value = i * j;
+                System.out.printf("%5d", value);
+                j++;
+            }
+            System.out.println();
             i++;
         }
     }
+
 
 
     private static void forDemo2() {
