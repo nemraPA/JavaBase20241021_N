@@ -2,19 +2,35 @@ package com.gmail.gloriyaarmen.lessonsJava.lesson06;
 
 import java.util.Scanner;
 
-public class lesson06СyclesForEach {
+public class Lesson06СyclesForEachDoWhile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 //        System.out.println("Input max value (1..10): ");
 //        int bound = scanner.nextInt();
 //        forDemo1();
 //        forDemo2();
-        whileDemo();
-
+//        whileDemo();
+        doWhileDemo();
 
 
     }
-        private static void whileDemo() {
+
+    private static void doWhileDemo() {
+        int i = 1;
+        do {
+            int j = 1;
+            while (j < 11) {
+                int value = i * j;
+                System.out.printf("%5d", value);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }while (i < 11);
+    }
+
+
+    private static void whileDemo() {
         int i = 1;
         while (i < 11) {
             int j = 1;
@@ -27,7 +43,6 @@ public class lesson06СyclesForEach {
             i++;
         }
     }
-
 
 
     private static void forDemo2() {
