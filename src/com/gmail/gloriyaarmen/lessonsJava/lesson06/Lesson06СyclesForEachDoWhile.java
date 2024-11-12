@@ -10,7 +10,17 @@ public class Lesson06СyclesForEachDoWhile {
 //        forDemo1();
 //        forDemo2();
 //        whileDemo();
-        doWhileDemo();
+//        doWhileDemo();
+
+        int[] prices = new int[]{12, 1765, 22, 7, 5};
+        for(int i = 0; i <prices.length; i++){
+            System.out.println("prices " + i + " == " + prices[i]);
+
+        }
+
+        for(int current : prices)
+            System.out.println(current);
+
 
 
     }
