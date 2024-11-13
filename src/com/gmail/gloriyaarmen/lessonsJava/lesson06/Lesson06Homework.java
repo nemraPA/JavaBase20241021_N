@@ -48,7 +48,3 @@ public class Lesson06Homework {
         System.out.printf("Sum of numbers is %d %s %s", result, "\n", "\n");
     }
 }
-
-
-
-
