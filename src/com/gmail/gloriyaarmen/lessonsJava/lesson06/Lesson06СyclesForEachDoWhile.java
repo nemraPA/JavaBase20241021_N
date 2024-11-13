@@ -12,100 +12,30 @@ public class Lesson06СyclesForEachDoWhile {
 //        whileDemo();
 //        doWhileDemo();
 
-        int[] prices = new int[]{12, 1765, 22, 7, 5};
-        for(int i = 0; i < prices.length; i++){
-            System.out.println("prices " + i + " == " + prices[i]);
+//        int[] prices = new int[]{12, 1765, 22, 7, 5};
+//        for(int i = 0; i < prices.length; i++){
+//            System.out.println("prices " + i + " == " + prices[i]);
+            System.out.print("!false ^ false \n\n");
+        int x = 5;
+        boolean b1 = true;
+        boolean b2 = false;
+
+        if ((x == 4) && !b2)
+            System.out.print("1 ");
+        System.out.print("2 ");
+        if((b2 = true) && b1)
+            System.out.print("3 ");
 
 
         }
-
-        System.out.println("prices.length:   " + prices.length);
-        for(int current : prices)
-            System.out.println(current);
-
-
-
-    }
-
-    private static void doWhileDemo() {
-        int i = 1;
-        do {
-            int j = 1;
-            while (j < 11) {
-                int value = i * j;
-                System.out.printf("%5d", value);
-                j++;
-            }
-            System.out.println();
-            i++;
-        }while (i < 11);
-    }
-
-
-    private static void whileDemo() {
-        int i = 1;
-        while (i < 11) {
-            int j = 1;
-            while (j < 11) {
-                int value = i * j;
-                System.out.printf("%5d", value);
-                j++;
-            }
-            System.out.println();
-            i++;
-        }
-    }
-
-
-    private static void forDemo2() {
-        for (int i = 1; i < 11; i++) {
-            if (i % 2 == 0) {
-                continue;
-            }
-            for (int j = 1; j < 11; j++) {
-                int value = i * j;
-                System.out.printf("%5d", value);
-            }
-            System.out.println();
-
-        }
-    }
-
-
-    private static void forDemo1() {
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
-        }
-    }
 }
-//        if(bound >= 1){
-//            System.out.println(1);
-//        }
-//        if(bound >= 2){
-//            System.out.println(2);
-//        }
-//        if(bound >= 3){
-//            System.out.println(3);
-//        }
-//        if(bound >=4){
-//            System.out.println(4);
-//        }
-//        if(bound >= 5){
-//            System.out.println(5);
-//        }
-//        if(bound >= 6){
-//            System.out.println(6);
-//        }
-//        if(bound >= 7){
-//            System.out.println(7);
-//        }
-//        if(bound >= 8){
-//            System.out.println(8);
-//        }
-//        if(bound >= 9){
-//            System.out.println(9);
-//        }
-//        if(bound >= 10){
-//            System.out.println(10);
-//        }
+//        System.out.println("prices.length:   " + prices.length);
+//        for(int current : prices)
+//            System.out.println(current);
+
+
+
+
+
+//0
 
