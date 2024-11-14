@@ -7,7 +7,7 @@ public class Lesson07Homework {
     public static void main(String[] args) {
         Random myRandom = new Random();
         Integer[] myArray = new Integer[20];
-
+//вывод значений массива на печать
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = myRandom.nextInt(-99, 100);
             System.out.print(myArray[i] + ", ");
@@ -39,15 +39,19 @@ public class Lesson07Homework {
 //наименьшее число
         int smallNamber = myArray[0];
         int bigNamber = myArray[0];
+        int smallIndexNumber =0;
+        int bigIndexNumber = 0;
         for (int i = 1; i < myArray.length; i++) {
             if (smallNamber > myArray[i]) {
                 smallNamber = myArray[i];
+                smallIndexNumber = i;
             } else if (bigNamber < myArray[i]){
                 bigNamber = myArray[i];
+                bigIndexNumber = i;
             }
         }
-        System.out.println("Найменший елемент: " + smallNamber);
-        System.out.println("Найбільший елемент: " + bigNamber);
+        System.out.println("Найменший елемент: " + smallNamber + " (з індексом " + smallIndexNumber + ")");
+        System.out.println("Найбільший елемент: " + bigNamber + " (з індексом " + bigIndexNumber + ")");
 //среднее арифметическое
         double arithmeticMean = 0;
         for (int i = 0; i < myArray.length; i++) {
