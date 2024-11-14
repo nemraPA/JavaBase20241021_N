@@ -24,7 +24,7 @@ public class Lesson07Homework {
             }
         }
         System.out.println("Сума від'ємних чисел: " + negativeSum);
-//количество парных чисел
+//количество парных и непарных чисел
         int pairedSum = 0;
         int oddSum = 0;
         for (int i = 0; i < myArray.length; i++) {
