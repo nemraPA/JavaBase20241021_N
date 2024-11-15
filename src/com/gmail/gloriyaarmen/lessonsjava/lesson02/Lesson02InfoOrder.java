@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsJava.lesson02;
+package com.gmail.gloriyaarmen.lessonsjava.lesson02;
 
 public class Lesson02InfoOrder {
     public static void main(String[] args) {

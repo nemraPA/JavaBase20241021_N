@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsJava.lesson03;
+package com.gmail.gloriyaarmen.lessonsjava.lesson03;
 
 public class lesson03Git_GitHub {
     public static void main(String[] args) {

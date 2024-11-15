@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsJava.lesson07;
+package com.gmail.gloriyaarmen.lessonsjava.lesson07;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsJava.lesson06;
+package com.gmail.gloriyaarmen.lessonsjava.lesson06;
 
 import java.util.Scanner;
 
