@@ -40,11 +40,10 @@ public class Lesson07Homework {
         int smallIndexNumber = 0;        //при помощи твоего замечания смог улчшить этот код, минус две переменные.
         int bigIndexNumber = 0;
         for (int i = 1; i < array.length; i++) {
-            if (array[smallIndexNumber] > array[i]) {
+            if (array[smallIndexNumber] > array[i]) {   // два отдельных ифа легче воспринимаются
                 smallIndexNumber = i;
-            } else if (array[bigIndexNumber] < array[i]) {
-                /* array[bigIndexNumber] = array[i]; // ошибка, не удалил из предыдущего варианта
-                 */                                  // (почему-то сразу этого не заметил)
+            }
+            if (array[bigIndexNumber] < array[i]) {
                 bigIndexNumber = i;
             }
         }
@@ -58,20 +57,20 @@ public class Lesson07Homework {
         int positionFirstNegative = array.length;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                positionFirstNegative = (i);
+                positionFirstNegative = i;    //дужки прибрав
                 break;
             }
         }
         // вычисление среднего значения или указание что нет отрицательных или оно последнее
-        if (positionFirstNegative == 19) {
+        if (positionFirstNegative == array.length - 1) {    // очень хороший способ использовать длину массива, стараюсь запомнить его и использовать
             System.out.println();
             System.out.println("Від'ємне число останнє: ");
         } else if (positionFirstNegative == array.length) {
             System.out.println();
             System.out.println("Немаэ від'ємних чисел: ");
         } else {
-            for (int j = positionFirstNegative; j < (array.length - 1); j++) {
-                arithmeticMean += array[j + 1];
+            for (int j = positionFirstNegative + 1; j < (array.length); j++) {  // согласен, твой вариант лучше воспринимается, исправил на один раз +1
+                arithmeticMean += array[j];
             }
             int numberOfElements = ((array.length - 1) - positionFirstNegative);
             arithmeticMean /= (numberOfElements);
