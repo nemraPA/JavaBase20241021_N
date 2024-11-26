@@ -11,8 +11,9 @@ public class Lesson09MultiArrays {
         matrix[0] = new int[]{1, 2, 3, 1, 2};
         matrix[1] = new int[]{5, 6, 7, 8};
         matrix[2] = new int[0];
+        matrix[3] = new int[5];
         matrix[1][3] = 42;
-//        matrix[1][13] = 42;
+        matrix[3][4] = 52;
 
         for (int i = 0; i < matrix.length; i++) {
 //            int[] row = matrix[i];
