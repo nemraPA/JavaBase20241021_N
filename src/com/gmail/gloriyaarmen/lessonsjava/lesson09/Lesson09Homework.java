@@ -45,26 +45,26 @@ public class Lesson09Homework {
         System.out.println("Сума елементів у непарних рядках: " + negativeRowSum);
 
         //  Произведение элементов в парных и непарных столбцах
-        long multiplicationPositiveRow = 1;
-        long multiplicationNegativeRow = 1;
+        long multiplicationPositiveColumn = 1;
+        long multiplicationNegativeColumn = 1;
         for (int j = 0; j < arrayMatrix.length; j++) {
             if (j % 2 == 0) {
                 for (int i = 0; i < arrayMatrix[j].length; i++) {
-                    multiplicationPositiveRow *= arrayMatrix[i][j];
+                    multiplicationPositiveColumn *= arrayMatrix[i][j];
                 }
             } else {
                 for (int i = 0; i < arrayMatrix[j].length; i++) {
-                    multiplicationNegativeRow *= arrayMatrix[i][j];
+                    multiplicationNegativeColumn *= arrayMatrix[i][j];
                 }
             }
         }
         System.out.println();
-        System.out.println("Добуток елементів у парних стовпцях:   " + multiplicationPositiveRow);
-        System.out.println("Добуток елементів у непарних стовпцях: " + multiplicationNegativeRow);
+        System.out.println("Добуток елементів у парних стовпцях:   " + multiplicationPositiveColumn);
+        System.out.println("Добуток елементів у непарних стовпцях: " + multiplicationNegativeColumn);
         System.out.println();
 
         //  Проверка на магический квадрат
-        int comparisonResult = 1;
+        int forComparisonResult = 1;   //переменная для суммы первой строки, для сравнения остальных сумм строк (столбцов, диагоналей)
         int magicSquare = 1;
 //  сумма по строкам
         Integer[] arrayLineSum = new Integer[arrayMatrix.length];   //новый масив для хранения сумм строк (столбцов и диагоналей)
@@ -75,10 +75,10 @@ public class Lesson09Homework {
             arrayLineSum[i] = currentRowSum;
             currentRowSum = 0;
         }
-        comparisonResult = arrayLineSum[0]; //сумма первой строки для сравнения остальных сумм строк, столбцов, диагоналей
+        forComparisonResult = arrayLineSum[0];
         int pozition = 1;
         while (pozition < arrayLineSum.length) {
-            if (comparisonResult == arrayLineSum[pozition]) {   //проверка пр строкам
+            if (forComparisonResult == arrayLineSum[pozition]) {   //проверка по строкам
                 pozition++;
             } else {
                 magicSquare = 0;
@@ -88,7 +88,6 @@ public class Lesson09Homework {
         }
 //  сумма по столбцам
         if (magicSquare == 1) {
-
             for (int currentRowSum = 0, j = 0; j < arrayLineSum.length; j++) {
                 for (int i = 0; i < arrayMatrix[j].length; i++) {
                     currentRowSum += arrayMatrix[i][j];
@@ -98,7 +97,7 @@ public class Lesson09Homework {
             }
             pozition = 0;
             while (pozition < arrayLineSum.length) {
-                if (comparisonResult == arrayLineSum[pozition]) {   //проверка по столбцам
+                if (forComparisonResult == arrayLineSum[pozition]) {   //проверка по столбцам
                     pozition++;
                 } else {
                     magicSquare = 0;
@@ -119,7 +118,7 @@ public class Lesson09Homework {
             for (int i = arrayMatrix.length - 1, j = 0; j < arrayMatrix.length; i--, j++) {
                 secondDiagonalSum += arrayMatrix[i][j];
             }
-            if (comparisonResult == firstDiagonalSum & comparisonResult != secondDiagonalSum) { //последняя проверка
+            if (forComparisonResult == firstDiagonalSum & forComparisonResult != secondDiagonalSum) { //последняя проверка
                 System.out.println("Матриця є магічним квадратом.");
             }
         } else {
