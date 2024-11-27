@@ -9,23 +9,33 @@ public class Lesson09Homework {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть розмір матриці від 2 до 5.");
         int value = scanner.nextInt();
-        if (!(value > 1 & value < 6)) {
-            while (!(value > 1 & value < 6)) {
-                System.out.println("Допустимі значення тільки від 2 до 5.");
-                value = scanner.nextInt();
-            }
-        }
+//        if (!(value > 1 & value < 6)) {
+//            while (!(value > 1 & value < 6)) {
+//                System.out.println("Допустимі значення тільки від 2 до 5.");
+////                value = scanner.nextInt();
+                value = 3;
+//            }
+//        }
         Integer[][] arrayMatrix = new Integer[value][value];
 
-//  Заполняем массив случайными числами и выводим на печать
-        for (int i = 0; i < arrayMatrix.length; i++) {
-            for (int j = 0; j < arrayMatrix[i].length; j++) {
-                arrayMatrix[i][j] = random.nextInt(1, 51);
-                System.out.print(arrayMatrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
+////  Заполняем массив случайными числами и выводим на печать
+//        for (int i = 0; i < arrayMatrix.length; i++) {
+//            for (int j = 0; j < arrayMatrix[i].length; j++) {
+//                arrayMatrix[i][j] = random.nextInt(1, 51);
+//                System.out.print(arrayMatrix[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+//  для проверки квадрата
+        arrayMatrix[0][0] = 13;
+        arrayMatrix[0][1] = 8;
+        arrayMatrix[0][2] = 15;
+        arrayMatrix[1][0] = 14;
+        arrayMatrix[1][1] = 12;
+        arrayMatrix[1][2] = 10;
+        arrayMatrix[2][0] = 9;
+        arrayMatrix[2][1] = 16;
+        arrayMatrix[2][2] = 11;
         //  Сумма элементов в парных и не парных рядках
         int positiveRowSum = 0;
         int negativeRowSum = 0;
