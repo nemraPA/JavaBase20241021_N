@@ -9,8 +9,8 @@ public class Lesson09Homework {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть розмір матриці від 2 до 5.");
         int value = scanner.nextInt();
-        if (value < 2 | value >= 5) {
-            while (value < 2 | value >= 5) {
+        if (!(value > 1 & value < 6)) {
+            while (!(value > 1 & value < 6)) {
                 System.out.println("Допустимі значення тільки від 2 до 5.");
                 value = scanner.nextInt();
             }
@@ -64,116 +64,66 @@ public class Lesson09Homework {
         System.out.println();
 
         //  Проверка на магический квадрат
-        //  По строкам
-        int firstLineSum = 0;
-        int secondLineSum = 0;
-        int secondColumnSum = 0;
-        int numberStep = 0;
-        int numberLine = 0;
-//        int currentRowSum = 0;
-
-        Integer[] arrayLineSum = new Integer[arrayMatrix.length];
-        for (int currentRowSum = 0,  i = 0; i < arrayLineSum.length; i++) {
+        int comparisonResult = 1;
+        int magicSquare = 1;
+//  сумма по строкам
+        Integer[] arrayLineSum = new Integer[arrayMatrix.length];   //новый масив для хранения сумм строк (столбцов и диагоналей)
+        for (int currentRowSum = 0, i = 0; i < arrayLineSum.length; i++) {
             for (int j = 0; j < arrayMatrix[i].length; j++) {
                 currentRowSum += arrayMatrix[i][j];
             }
             arrayLineSum[i] = currentRowSum;
             currentRowSum = 0;
         }
-
-        int pozition = 0;
-        while (pozition < arrayLineSum.length - 1){
-            if (arrayLineSum[pozition] == arrayLineSum[pozition + 1]){
+        comparisonResult = arrayLineSum[0]; //сумма первой строки для сравнения остальных сумм строк, столбцов, диагоналей
+        int pozition = 1;
+        while (pozition < arrayLineSum.length) {
+            if (comparisonResult == arrayLineSum[pozition]) {   //проверка пр строкам
                 pozition++;
             } else {
-                System.out.println("Матриця не є магічним квадратом.");
-                pozition = arrayLineSum.length;
+                magicSquare = 0;
+//                System.out.println("Матриця не є магічним квадратом.");
+                break;
+            }
+        }
+//  сумма по столбцам
+        if (magicSquare == 1) {
+
+            for (int currentRowSum = 0, j = 0; j < arrayLineSum.length; j++) {
+                for (int i = 0; i < arrayMatrix[j].length; i++) {
+                    currentRowSum += arrayMatrix[i][j];
+                }
+                arrayLineSum[j] = currentRowSum;
+                currentRowSum = 0;
+            }
+            pozition = 0;
+            while (pozition < arrayLineSum.length) {
+                if (comparisonResult == arrayLineSum[pozition]) {   //проверка по столбцам
+                    pozition++;
+                } else {
+                    magicSquare = 0;
+//                    System.out.println("Матриця не є магічним квадратом.");
+                    break;
+                }
             }
         }
 
+//  сумма по диагоналям
+        if (magicSquare == 1) {
 
-
-
-
-        while (numberStep < 2) {
-            numberStep++;
-
-            if (numberStep == 1) {
-                for (int i = numberLine, j = 0; j < arrayMatrix[i].length; j++) {
-                    firstLineSum += arrayMatrix[i][j];
-                }
-                numberLine++;
-            } else {
-                for (int i = numberLine, j = 0; j < arrayMatrix[i].length; j++) {
-                    secondLineSum += arrayMatrix[i][j];
-                }
-                numberLine++;
+            int firstDiagonalSum = 0;
+            int secondDiagonalSum = 0;
+            for (int i = 0, j = 0; i < arrayMatrix.length; i++, j++) {
+                firstDiagonalSum += arrayMatrix[i][j];
             }
-        }
-        if (firstLineSum == secondLineSum) {
-            secondLineSum = 0;
-            for (int i = numberLine, j = 0; j < arrayMatrix[i].length; j++) {
-                secondLineSum += arrayMatrix[i][j];
+            for (int i = arrayMatrix.length - 1, j = 0; j < arrayMatrix.length; i--, j++) {
+                secondDiagonalSum += arrayMatrix[i][j];
             }
-            numberLine++;
-            if (firstLineSum == secondLineSum) {
-                for (int i = numberLine, j = 0; j < arrayMatrix[i].length; j++) {
-                    secondLineSum += arrayMatrix[i][j];
-                }
+            if (comparisonResult == firstDiagonalSum & comparisonResult != secondDiagonalSum) { //последняя проверка
+                System.out.println("Матриця є магічним квадратом.");
             }
         } else {
             System.out.println("Матриця не є магічним квадратом.");
         }
-//            lineNumber++;
-//
-//        } else {
-//            System.out.println("Матриця не є магічним квадратом.");
-//            break;
-//        }
-//    }
-//        int lineNumber = 1;
-//        do {
-//            for (int i = lineNumber, j = 0; j < arrayMatrix[i].length; j++) {
-//                secondLineSum += arrayMatrix[i][j];
-//            }
-//            if (firstLineSum == secondLineSum) {
-//                lineNumber++;
-//                secondLineSum = 0;
-//            } else {
-//                System.out.println("Матриця не є магічним квадратом.");
-//                break;
-//            }
-//        } while (lineNumber < arrayMatrix.length);
-////  По столбцам
-//        lineNumber = 0;
-//        do {
-//            for (int j = lineNumber, i = 0; i < arrayMatrix[j].length; i++) {
-//                secondColumnSum += arrayMatrix[i][j];
-//            }
-//            if (firstLineSum == secondColumnSum) {
-//                lineNumber++;
-//                secondColumnSum = 0;
-//            } else {
-//                System.out.println("Матриця не є магічним квадратом.");
-//                break;
-//            }
-//        } while (lineNumber < arrayMatrix.length);
-//
-//        //  По диагоналям
-//        int firstDiagonalSum = 0;
-//        int secondDiagonalSum = 0;
-//        for (int i = 0, j = 0; i < arrayMatrix.length; i++, j++) {
-//            firstDiagonalSum += arrayMatrix[i][j];
-//        }
-//        if (firstLineSum == firstDiagonalSum) {
-//            for (int i = arrayMatrix.length - 1, j = 0; j < arrayMatrix.length; i--, j++) {
-//                secondDiagonalSum += arrayMatrix[i][j];
-//            }
-//            if (firstDiagonalSum == secondDiagonalSum) {
-//                System.out.println("Матриця є магічним квадратом.");
-//            } else {
-//                System.out.println("Матриця не є магічним квадратом.");
-//            }
-//        }
     }
 }
