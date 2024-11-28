@@ -8,7 +8,7 @@ public class Lesson09MultiArrays {
                 {5, 6, 7, 8, 9}
         }; */
 
-        matrix[0] = new int[]{1, 2, 3, 1, 2};
+        //matrix[0] = new int[]{};//1, 2, 3, 1, 2};
         matrix[1] = new int[]{5, 6, 7, 8};
         matrix[2] = new int[0];
         matrix[3] = new int[5];
@@ -16,7 +16,7 @@ public class Lesson09MultiArrays {
         matrix[3][4] = 52;
 
         for (int i = 0; i < matrix.length; i++) {
-//            int[] row = matrix[i];
+            int[] row = matrix[i];
 //            print(row);
             if (matrix[i] == null) {
                 continue;
