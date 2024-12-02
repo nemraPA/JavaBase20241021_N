@@ -15,14 +15,24 @@ public class Lesson09Homework {
                 value = scanner.nextInt();
             }
         }
-        Integer[][] arrayMatrix = new Integer[value][value];
+        Integer[][] arrayMatrix = new Integer[value][value];    //для положительного результата на магический квадрат, вместо value в этой строке установить значение 3
 
-//  Заполняем массив случайными числами
-        for (int i = 0; i < arrayMatrix.length; i++) {
-            for (int j = 0; j < arrayMatrix[i].length; j++) {
-                arrayMatrix[i][j] = random.nextInt(1, 51);
+        for (int i = 0; i < arrayMatrix.length; i++) {                      //для положительного результата на магический квадрат,
+            for (int j = 0; j < arrayMatrix[i].length; j++) {               //весь этот блок
+                arrayMatrix[i][j] = random.nextInt(1, 51);      //закомментировать
             }
         }
+
+//        arrayMatrix[0][0] = 7;          //для положительного результата на магический квадрат, этот блок разкомментировать
+//        arrayMatrix[0][1] = 14;
+//        arrayMatrix[0][2] = 9;
+//        arrayMatrix[1][0] = 12;
+//        arrayMatrix[1][1] = 10;
+//        arrayMatrix[1][2] = 8;
+//        arrayMatrix[2][0] = 11;
+//        arrayMatrix[2][1] = 6;
+//        arrayMatrix[2][2] = 12;
+
         printArray(arrayMatrix);
 
 //  Сумма элементов в парных и не парных рядках
@@ -59,44 +69,39 @@ public class Lesson09Homework {
         System.out.println();
 
 //  Проверка на магический квадрат
+        boolean magicSquareTest = true;
         int firstForComparison = getRowSum(arrayMatrix[0]);
-        long nextForComparison = 0;
-        //  проверка по строкам
-        for (column = 1; column < arrayMatrix.length; column++) {
-            nextForComparison = getRowSum(arrayMatrix[column]);
+
+        if (magicSquareTest == getCheckByRow(arrayMatrix, firstForComparison)) {
+            System.out.println("Матриця є магічним квадратом!");
+        } else {
+            System.out.println("Матриця не є магічним квадратом.N");
+        }
+    }
+
+    private static boolean getCheckByRow(Integer[][] arrayMatrix, int firstForComparison) {
+        long nextForComparison;
+        for (int i = 1; i < arrayMatrix.length; i++) {
+            nextForComparison = getRowSum(arrayMatrix[i]);
             if (firstForComparison != nextForComparison) {
-                System.out.println("Матриця не є магічним квадратом.");
-                break;
-            } else {
-                //  проверка по столбцам
-                for (column = 0; column < arrayMatrix.length; column++) {
-                    nextForComparison = getColumnSum(arrayMatrix, column);
-                    if (firstForComparison != nextForComparison) {
-                        System.out.println("Матриця не є магічним квадратом.2");
-                        column = arrayMatrix.length;
-                        break;
-                    } else {
-                        //  проверка по диагоналям
-                        nextForComparison = getFirstDiagonalSum(arrayMatrix);
-                        if (firstForComparison != nextForComparison) {
-                            System.out.println("Матриця не є магічним квадратом.3");
-                            column = arrayMatrix.length;
-                            break;
-                        } else {
-                            nextForComparison = getSecondDiagonalSum(arrayMatrix);
-                            if (firstForComparison != nextForComparison) {
-                                System.out.println("Матриця не є магічним квадратом.4");
-                                column = arrayMatrix.length;
-                                break;
-                            } else {
-                                column = arrayMatrix.length;
-                                System.out.println("Матриця є магічним квадратом!");
-                            }
-                        }
-                    }
-                }
+                return false;
             }
         }
+        for (int i = 0; i < arrayMatrix.length; i++) {
+            nextForComparison = getColumnSum(arrayMatrix, i);
+            if (firstForComparison != nextForComparison) {
+                return false;
+            }
+        }
+        nextForComparison = getFirstDiagonalSum(arrayMatrix);
+        if (firstForComparison != nextForComparison) {
+            return false;
+        }
+        nextForComparison = getSecondDiagonalSum(arrayMatrix);
+        if (firstForComparison != nextForComparison) {
+            return false;
+        }
+        return true;
     }
 
     private static void printArray(Integer[][] arrayMatrix) {
