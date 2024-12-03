@@ -6,18 +6,17 @@ import java.util.Scanner;
 public class Lesson10Homework {
     public static void main(String[] args) {
         Scanner scannerN = new Scanner(System.in);
-//        System.out.println("Введіть ціле число (але не більше дев'ятизначного числа).");
-//        long value = scannerN.nextInt();
-//
-//        System.out.printf("Квадрат числа %d дорівнює %,.0f.\n\n", value, getSquareNumber(value));
-//
-//        System.out.println("Введіть послідовно два значення з десятковою точністю через кому, радіус та висоту циліндра.");
-//        System.out.println("Введіть значення радіус.");
-//        float definedValueRadius = scannerN.nextFloat();
-//        System.out.println("Введіть значення радіус.");
-//        float definedValueHeight = scannerN.nextFloat();
-//        System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
-//                + getCapacityCylinder(definedValueRadius, definedValueHeight));
+        System.out.println("Введіть ціле число (але не більше дев'ятизначного числа).");
+        long value = scannerN.nextInt();
+        System.out.printf("Квадрат числа %d дорівнює %,.0f.\n\n", value, getSquareNumber(value));
+
+        System.out.println("Введіть послідовно два значення, радіус та висоту циліндра, з десятковою точністю через кому.");
+        System.out.println("Введіть значення радіус.");
+        float definedValueRadius = scannerN.nextFloat();
+        System.out.println("Введіть значення радіус.");
+        float definedValueHeight = scannerN.nextFloat();
+        System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
+                + getCapacityCylinder(definedValueRadius, definedValueHeight));
 
         Integer[] array = new Integer[]{10, 20, 30, 40, 50};
         String strArray = Arrays.toString(array);
@@ -25,22 +24,58 @@ public class Lesson10Homework {
         System.out.println("Масив чисел: " + strArray);
         System.out.println("Сума всіх елементів масиву дорівнює: " + getSumArray(array) + ".");
 
+        System.out.println();
         System.out.println("Введіть довільний короткий рядок.");
-        String arbitraryString = scannerN.nextLine();
-        System.out.println(arbitraryString);
-        char [] arrayArbitraryString = arbitraryString.toCharArray();
-        char [] repeatArrayArbitraryString = arbitraryString.toCharArray();
-        System.out.println(arrayArbitraryString[2]);
+        Scanner scannerS = new Scanner(System.in);
+        String arbitraryString = scannerS.nextLine();
+        System.out.println("Рядок в зворотньому порядку:");
+        System.out.println(getInvertedArbitraryString(arbitraryString));
 
-        for (int i = 0, j = arrayArbitraryString.length - 1; i < arrayArbitraryString.length; i++, j--) {
+        System.out.println();
+        System.out.println("Введіть послідовно два цілі числа від 1 до 10, перше буде числом, друге, ступенем цього числа.");
+        System.out.println("Введіть перше число.");
+        int numberA = scannerN.nextInt();
+        System.out.println("Введіть друге число.");
+        int numberB = scannerN.nextInt();
+        float numberC = getPowerNumber(numberA, numberB);
+        System.out.printf("%,.0f\n", numberC);
+
+        System.out.println();
+        System.out.println("Введіть ціле число n:");
+        numberA = scannerN.nextInt();
+        System.out.println("Введіть текстовий короткий рядок.");
+        arbitraryString = scannerS.nextLine();
+        getStringTimes(numberA, arbitraryString);
+    }
+
+
+    private static void getStringTimes(int a, String str) {
+        for (int i = 0; i < a; i++) {
+            System.out.println(str);
+        }
+    }
+
+    private static float getPowerNumber(int a, int b) {
+        float c = a;
+        for (int i = 1; i < b; i++) {
+            c = c * a;
+        }
+        return c;
+    }
+
+    private static String getInvertedArbitraryString(String arbitraryStringMethod) {
+        char[] arrayArbitraryString = arbitraryStringMethod.toCharArray();
+        char[] repeatArrayArbitraryString = arbitraryStringMethod.toCharArray();
+        for (int i = 0, j = repeatArrayArbitraryString.length - 1; i < arrayArbitraryString.length; i++, j--) {
             repeatArrayArbitraryString[j] = arrayArbitraryString[i];
         }
-        System.out.println(repeatArrayArbitraryString);
+        arbitraryStringMethod = String.valueOf(repeatArrayArbitraryString);
+        return arbitraryStringMethod;
     }
 
     private static int getSumArray(Integer[] array) {
         int sumArray = 0;
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             sumArray += array[i];
         }
         return sumArray;
