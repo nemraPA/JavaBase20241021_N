@@ -16,6 +16,6 @@ public class Person {
     }
 
     public void reName(String newName) {
-        this.name = newName;
+        this.profession = newName;
     }
 }

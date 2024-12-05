@@ -17,7 +17,7 @@ public class Lesson11Homework {
         System.out.print("\n\n2. ");
         personFourth.describeN();
         System.out.print("   (Після оновлення професії)\n");
-        personThird.reName("Дизайнер");
+        personFourth.reName("Дизайнер");
         System.out.print("   ");
         personFourth.describeN();
     }
