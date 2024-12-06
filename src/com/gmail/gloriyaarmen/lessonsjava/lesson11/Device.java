@@ -27,4 +27,16 @@ public class Device {
     public void describe() {
         System.out.println(name + " has imei == " + imei);
     }
+
+    public String getName() {
+        //System.out.println(name + " Nemra");
+        //name = "Novoe Imya";
+        return name = "Novoe Imya";//"Text";
+    }
+
+    public String getName2() {
+        //System.out.println(name + " Nemra");
+        //this.name;// = "Novoe Imya";
+        return name;//"Text";
+    }
 }

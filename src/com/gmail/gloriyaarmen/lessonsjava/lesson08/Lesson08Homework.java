@@ -42,20 +42,22 @@ public class Lesson08Homework {
 
         int left = 0;
         int right = array.length - 1;
+        int middle = 0;
         while (left <= right) {
-            int middle = (left + right) / 2;
+            middle = (left + right) / 2;
             if (array[middle] > numberEntered) {
                 right = middle - 1;
             } else if (array[middle] < numberEntered) {
                 left = middle + 1;
-            } else {
-                System.out.println();
-                System.out.println("Число " + numberEntered + " має індекс в массиві [" + middle + "]");
+            } else if(array[middle] == numberEntered){
                 break;
             }
         }
-        if (left > right) {
+
+        if (array[middle] == numberEntered) {
             System.out.println();
+            System.out.println("Число " + numberEntered + " має індекс в массиві [" + middle + "]");
+        } else {System.out.println();
             System.out.println("Число: " + numberEntered + " відсутнє в массиві.");
         }
     }
