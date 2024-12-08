@@ -49,7 +49,7 @@ public class Lesson08Homework {
                 right = middle - 1;
             } else if (array[middle] < numberEntered) {
                 left = middle + 1;
-            } else if(array[middle] == numberEntered){
+            } else if (array[middle] == numberEntered){
                 break;
             }
         }

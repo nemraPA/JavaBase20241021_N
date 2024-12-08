@@ -9,8 +9,8 @@ public class Lesson09Homework {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть розмір матриці від 2 до 5.");
         int value = scanner.nextInt();
-        if (!(value > 1 & value < 6)) {
-            while (!(value > 1 & value < 6)) {
+        if (value <= 1 || value >= 6) {
+            while (value <= 1 || value >= 6) {
                 System.out.println("Допустимі значення тільки від 2 до 5.");
                 value = scanner.nextInt();
             }
@@ -31,7 +31,7 @@ public class Lesson09Homework {
 //        arrayMatrix[1][2] = 8;
 //        arrayMatrix[2][0] = 11;
 //        arrayMatrix[2][1] = 6;
-//        arrayMatrix[2][2] = 12;
+//        arrayMatrix[2][2] = 13;
 
         printArray(arrayMatrix);
 
@@ -69,13 +69,12 @@ public class Lesson09Homework {
         System.out.println();
 
 //  Проверка на магический квадрат
-        boolean magicSquareTest = true;
         int firstForComparison = getRowSum(arrayMatrix[0]);
 
-        if (magicSquareTest == getCheckByRow(arrayMatrix, firstForComparison)) {
+        if (getCheckByRow(arrayMatrix, firstForComparison)) {
             System.out.println("Матриця є магічним квадратом!");
         } else {
-            System.out.println("Матриця не є магічним квадратом.N");
+            System.out.println("Матриця не є магічним квадратом.");
         }
     }
 
