@@ -6,19 +6,22 @@ public class Lesson11Homework {
                 new Person("Mary", 25, "Вчитель"),
                 new Person("Bob", 35, "Лікар")
         };
+        System.out.print("1.");
+        for(int i = 0; i < persons.length; i++) {
+            persons[i].describe();
+        }
+//            persons[element].describe();
+//            System.out.print("   ");
+//            persons[1].describe();
+//            System.out.print("   ");
+//            persons[2].describe();
 
-        System.out.print("1. ");
-        persons[0].describe();
-        System.out.print("   ");
-        persons[1].describe();
-        System.out.print("   ");
-        persons[2].describe();
 
         Person personFourth = new Person("Alice", 28, "Архітектор");
         System.out.print("\n\n2. ");
         personFourth.describe();
         System.out.print("   (Після оновлення професії)\n");
-        personFourth.reProfession("Дизайнер");
+        personFourth.changeProfession("Дизайнер");
         System.out.print("   ");
         personFourth.describe();
     }

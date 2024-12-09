@@ -12,10 +12,10 @@ public class Person {
     }
 
     public void describe() {
-        System.out.println("Ім'я: " + name + "  Вік: " + age + "  Професія: " + profession);
+        System.out.printf("%10.0s","%10.0s", "Ім'я: ", name);//, "  Вік: " + age + "  Професія: " + profession);
     }
 
-    public void reProfession(String newProfession) {
+    public void changeProfession(String newProfession) {
         this.profession = newProfession;
     }
 }
