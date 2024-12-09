@@ -5,17 +5,17 @@ public class Person {
     Integer age;
     String profession;
 
-    public Person(String nameN, Integer ageN, String professionN) {
-        name = nameN;
-        age = ageN;
-        profession = professionN;
+    public Person(String name, Integer age, String profession) {
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
     }
 
-    public void describeN() {
+    public void describe() {
         System.out.println("Ім'я: " + name + "  Вік: " + age + "  Професія: " + profession);
     }
 
-    public void reName(String newName) {
-        this.profession = newName;
+    public void reProfession(String newProfession) {
+        this.profession = newProfession;
     }
 }
