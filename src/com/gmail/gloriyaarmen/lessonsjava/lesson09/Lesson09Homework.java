@@ -9,11 +9,9 @@ public class Lesson09Homework {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть розмір матриці від 2 до 5.");
         int value = scanner.nextInt();
-        if (value <= 1 || value >= 6) {
-            while (value <= 1 || value >= 6) {
-                System.out.println("Допустимі значення тільки від 2 до 5.");
-                value = scanner.nextInt();
-            }
+        while (value <= 1 || value >= 6) {
+            System.out.println("Допустимі значення тільки від 2 до 5.");
+            value = scanner.nextInt();
         }
         Integer[][] arrayMatrix = new Integer[value][value];    //для положительного результата на магический квадрат, вместо value в этой строке установить значение 3
 
