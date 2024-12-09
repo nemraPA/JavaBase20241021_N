@@ -18,7 +18,7 @@ public class Lesson10Homework {
         System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
                 + getCapacityCylinder(definedValueRadius, definedValueHeight));
 
-        Integer[] array = new Integer[]{10, 20, 30, 40, 50};
+        Integer[] array = {10, 20, 30, 40, 50};
         String strArray = Arrays.toString(array);
         System.out.println();
         System.out.println("Масив чисел: " + strArray);
@@ -26,8 +26,8 @@ public class Lesson10Homework {
 
         System.out.println();
         System.out.println("Введіть довільний короткий рядок.");
-        Scanner scannerS = new Scanner(System.in);
-        String arbitraryString = scannerS.nextLine();
+        //Scanner scannerS = new Scanner(System.in);
+        String arbitraryString = scannerN.nextLine();
         System.out.println("Рядок в зворотньому порядку:");
         System.out.println(getInvertedArbitraryString(arbitraryString));
 
@@ -38,7 +38,7 @@ public class Lesson10Homework {
         System.out.println("Введіть друге число.");
         int numberB = scannerN.nextInt();
         float numberC = getPowerNumber(numberA, numberB);
-        System.out.printf("%,.0f\n", numberC);
+        System.out.printf("%,.10f\n", numberC);
 
         System.out.println();
         System.out.println("Введіть ціле число n:");
@@ -55,12 +55,17 @@ public class Lesson10Homework {
         }
     }
 
-    private static float getPowerNumber(int a, int b) {
-        float c = a;
+    private static float getPowerNumber(int base, int exponent) {
+        int b = Math.abs(exponent);
+        float a = base;
         for (int i = 1; i < b; i++) {
-            c = c * a;
+            a = a * base;
         }
-        return c;
+        if (exponent < 0) {
+            return (1 / a);
+        } else {
+            return a;
+        }
     }
 
     private static String getInvertedArbitraryString(String arbitraryStringMethod) {
