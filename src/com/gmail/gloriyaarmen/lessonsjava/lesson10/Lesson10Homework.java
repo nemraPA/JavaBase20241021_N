@@ -6,16 +6,18 @@ import java.util.Scanner;
 public class Lesson10Homework {
     public static void main(String[] args) {
         Scanner scannerN = new Scanner(System.in);
-        Scanner scannerS = new Scanner(System.in);
         System.out.println("Введіть ціле число (але не більше дев'ятизначного числа).");
         long value = scannerN.nextInt();
+        scannerN.nextLine();
         System.out.printf("Квадрат числа %d дорівнює %,.0f.\n\n", value, square(value));
 
         System.out.println("Введіть послідовно два значення, радіус та висоту циліндра, з десятковою точністю через кому.");
         System.out.println("Введіть значення радіус.");
         float definedValueRadius = scannerN.nextFloat();
+        scannerN.nextLine();
         System.out.println("Введіть значення радіус.");
         float definedValueHeight = scannerN.nextFloat();
+        scannerN.nextLine();
         System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
                 + cylinderVolume(definedValueRadius, definedValueHeight));
 
@@ -27,31 +29,34 @@ public class Lesson10Homework {
 
         System.out.println();
         System.out.print("Введіть довільний короткий рядок:\n");
-        String arbitraryString = scannerS.nextLine();
+        String arbitraryString = scannerN.nextLine();
         System.out.print("Рядок в зворотньому порядку:\n");
         System.out.println(invertString(arbitraryString));
 
         System.out.println();
         System.out.println("Введіть послідовно два цілі числа від 1 до 10, перше буде числом, друге, ступенем цього числа.");
         System.out.println("Введіть перше число.");
-        int numberA = scannerN.nextInt();
+        int numberBase = scannerN.nextInt();
+        scannerN.nextLine();
         System.out.println("Введіть друге число.");
-        int numberB = scannerN.nextInt();
-        float numberC = power(numberA, numberB);
-        System.out.printf("%,.10f\n", numberC);
+        int numberExponent = scannerN.nextInt();
+        scannerN.nextLine();
+        float result = power(numberBase, numberExponent);
+        System.out.printf("%,.10f\n", result);
 
         System.out.println();
         System.out.println("Введіть ціле число n:");
-        numberA = scannerN.nextInt();
+        numberBase = scannerN.nextInt();
+        scannerN.nextLine();
         System.out.println("Введіть текстовий короткий рядок.");
-        arbitraryString = scannerS.nextLine();
-        printText(numberA, arbitraryString);
+        arbitraryString = scannerN.nextLine();
+        printText(numberBase, arbitraryString);
     }
 
 
-    private static void printText(int a, String str) {
-        for (int i = 0; i < a; i++) {
-            System.out.println(str);
+    private static void printText(int times, String text) {
+        for (int i = 0; i < times; i++) {
+            System.out.println(text);
         }
     }
 
