@@ -4,25 +4,20 @@ public class Lesson11Homework {
     public static void main(String[] args) {
         Person[] persons = {new Person("John", 30, "Інженер"),
                 new Person("Mary", 25, "Вчитель"),
-                new Person("Bob", 35, "Лікар")
+                new Person("Bob", 35, "Лікар"),
+                new Person("Alice", 28, "Архітектор")
         };
-        System.out.print("1.");
-        for(int i = 0; i < persons.length; i++) {
-            persons[i].describe();
+
+        System.out.print("\n1.");
+        for (int i = 0; i < persons.length - 1; i++) {
+            persons[i].printInfo();
         }
-//            persons[element].describe();
-//            System.out.print("   ");
-//            persons[1].describe();
-//            System.out.print("   ");
-//            persons[2].describe();
 
-
-        Person personFourth = new Person("Alice", 28, "Архітектор");
-        System.out.print("\n\n2. ");
-        personFourth.describe();
-        System.out.print("   (Після оновлення професії)\n");
-        personFourth.changeProfession("Дизайнер");
-        System.out.print("   ");
-        personFourth.describe();
+        System.out.print("\n2.");
+        persons[3].printInfo();
+        System.out.println("     (Після оновлення професії)");
+        persons[3].changeProfession("Дизайнер");
+        System.out.print("  ");
+        persons[3].printInfo();
     }
 }

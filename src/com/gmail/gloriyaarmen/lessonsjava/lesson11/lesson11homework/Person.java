@@ -11,8 +11,8 @@ public class Person {
         this.profession = profession;
     }
 
-    public void describe() {
-        System.out.printf("%10.0s","%10.0s", "Ім'я: ", name);//, "  Вік: " + age + "  Професія: " + profession);
+    public void printInfo() {
+        System.out.printf("   Ім'я: %s, Вік: %s, Професія: %s\n", name, age, profession);
     }
 
     public void changeProfession(String newProfession) {
