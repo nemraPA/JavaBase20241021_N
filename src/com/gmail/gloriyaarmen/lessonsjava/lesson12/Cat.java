@@ -16,11 +16,11 @@ public class Cat extends Animal {
         super(name, age);
     }
 
-    @Override
+    //@Override
     public void describe() {
-        System.out.println("-= Animal =-");
-        super.describe();
+        //System.out.println("-= Animal =-");
         System.out.println("-= Cat =-");
+        super.describe();
         System.out.println("I'm a " + color + " cat. My name is " + name + ". My age is " + age + ".");
     }
 }

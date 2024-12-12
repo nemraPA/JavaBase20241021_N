@@ -6,8 +6,8 @@ public class AnimalDemo {
                 new Dog("dog", 3),
                 new Cat("cat", 1)
         };
-        print(animals);
-        saySomething(animals);
+        //print(animals);
+        //saySomething(animals);
 
         Cat cat = new Cat("pretty cat", 2, "black");
         cat.describe();
@@ -20,7 +20,7 @@ public class AnimalDemo {
 
     public static void print(Animal[] animals) {
         System.out.println();
-        System.out.println("SAYING....");
+        //System.out.println("SAYING....");
         for (Animal animal : animals) {
             animal.describe();
         }

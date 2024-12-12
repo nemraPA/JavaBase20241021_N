@@ -15,7 +15,7 @@ public class Animal {
     }
 
     public void describe() {
-        System.out.println("Im " + name + ". My age is " + age + ".");
+        System.out.println("1 Im " + name + ". My age is " + age + ".");
     }
 
     public void say() {
