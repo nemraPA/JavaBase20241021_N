@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 public class Lesson10Homework {
     public static void main(String[] args) {
-        Scanner scannerN = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть ціле число (але не більше дев'ятизначного числа).");
-        long value = scannerN.nextInt();
-        scannerN.nextLine();
+        long value = scanner.nextInt();
+        scanner.nextLine();
         System.out.printf("Квадрат числа %d дорівнює %,.0f.\n\n", value, square(value));
 
         System.out.println("Введіть послідовно два значення, радіус та висоту циліндра, з десятковою точністю через кому.");
         System.out.println("Введіть значення радіус.");
-        float definedValueRadius = scannerN.nextFloat();
-        scannerN.nextLine();
+        float definedValueRadius = scanner.nextFloat();
+        scanner.nextLine();
         System.out.println("Введіть значення радіус.");
-        float definedValueHeight = scannerN.nextFloat();
-        scannerN.nextLine();
+        float definedValueHeight = scanner.nextFloat();
+        scanner.nextLine();
         System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
                 + cylinderVolume(definedValueRadius, definedValueHeight));
 
@@ -29,28 +29,28 @@ public class Lesson10Homework {
 
         System.out.println();
         System.out.print("Введіть довільний короткий рядок:\n");
-        String arbitraryString = scannerN.nextLine();
+        String arbitraryString = scanner.nextLine();
         System.out.print("Рядок в зворотньому порядку:\n");
         System.out.println(invertString(arbitraryString));
 
         System.out.println();
         System.out.println("Введіть послідовно два цілі числа від 1 до 10, перше буде числом, друге, ступенем цього числа.");
         System.out.println("Введіть перше число.");
-        int numberBase = scannerN.nextInt();
-        scannerN.nextLine();
+        int base = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Введіть друге число.");
-        int numberExponent = scannerN.nextInt();
-        scannerN.nextLine();
-        float result = power(numberBase, numberExponent);
+        int numberExponent = scanner.nextInt();
+        scanner.nextLine();
+        float result = power(base, numberExponent);
         System.out.printf("%,.10f\n", result);
 
         System.out.println();
         System.out.println("Введіть ціле число n:");
-        numberBase = scannerN.nextInt();
-        scannerN.nextLine();
+        base = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Введіть текстовий короткий рядок.");
-        arbitraryString = scannerN.nextLine();
-        printText(numberBase, arbitraryString);
+        arbitraryString = scanner.nextLine();
+        printText(base, arbitraryString);
     }
 
 
