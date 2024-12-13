@@ -19,6 +19,6 @@ public class Animal {
     }
 
     public void say() {
-        System.out.println("Default text");
+        System.out.println("Default text Nemra");
     }
 }
