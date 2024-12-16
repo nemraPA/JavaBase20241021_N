@@ -1,13 +1,23 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13;
 
 public class Hacker {
-    private BankAccount account;
+    private BankAccount accountN;
+
+//    public Hacker() {
+//        this.accountN = null;
+//    }
 
     public Hacker(BankAccount account) {
-        this.account = account;
+        this.accountN = account;
+    }
+    //    public void hack() {
+    void hack() {
+//        accountN.amount += (-100000);
+        accountN.addMoney(-100000);
+//        info();
     }
 
-    public void hack() {
-        account.amount += (-100000);
+    protected void info() {
+        System.out.println("I'm a hacker)");
     }
 }

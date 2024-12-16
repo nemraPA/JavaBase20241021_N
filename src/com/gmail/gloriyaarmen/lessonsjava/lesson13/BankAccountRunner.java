@@ -7,10 +7,13 @@ public class BankAccountRunner {
 
         account.addMoney(-100000);
         account.info();
+        boolean blocked = account.isBlocked();
+        System.out.println("Account is blocked: " + blocked);
 
         System.out.println("-= Hack account =-");
         Hacker hacker = new Hacker(account);
         hacker.hack();
         account.info();
+        hacker.info();
     }
 }
