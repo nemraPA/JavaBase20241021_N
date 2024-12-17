@@ -1,6 +1,6 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson12.lesson12homework;
 
-public class EmployeesRunner {
+public class Homework12Runner {
     public static void main(String[] args) {
         Employees employee = new Employees(
                 "Hantil Yuriy Vadimovich",
