@@ -8,21 +8,22 @@ public class Car {
     }
 
     private void startElectricity() {
-        String status = "Start Electricity: completed.";
-        info(status);
+        System.out.println("Start Electricity: completed.");
     }
 
     private void startCommand() {
-        String status = "Start Command: completed.";
-        info(status);
+        System.out.println("Start Command: completed.");
     }
 
     private void startFuelSystem() {
-        String status = "Start Fuel System: completed.";
-        info(status);
+        System.out.println("Start Fuel System: completed.");
     }
 
-    public void info(String message) {
-        System.out.println(message);
+    @Override
+    public String toString() {
+        startElectricity();
+        startCommand();
+        startFuelSystem();
+        return null;
     }
 }

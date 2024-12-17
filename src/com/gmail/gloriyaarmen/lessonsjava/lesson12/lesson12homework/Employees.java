@@ -4,22 +4,24 @@ public class Employees {
     private String name;
     private String position;
     private String email;
-    private double foneNumber;
+    private double phoneNumber;
     private int age;
 
-    public Employees(String name, String position, String email, double foneNumber, int age) {
+    public Employees(String name, String position, String email, double phoneNumber, int age) {
         this.name = name;
         this.position = position;
         this.email = email;
-        this.foneNumber = foneNumber;
+        this.phoneNumber = phoneNumber;
         this.age = age;
     }
 
-    public void info() {
+    @Override
+    public String toString() {
         System.out.println("Name: " + name);
         System.out.println("Position: " + position);
         System.out.println("Email: " + email);
-        System.out.printf("Fone number: +%.0f\n", foneNumber);
+        System.out.printf("Phone number: +%.0f\n", phoneNumber);
         System.out.println("Age: " + age);
+        return null;
     }
 }

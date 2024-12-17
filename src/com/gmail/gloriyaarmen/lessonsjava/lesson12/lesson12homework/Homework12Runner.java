@@ -9,8 +9,14 @@ public class Homework12Runner {
                 380501234567d,
                 40);
 
-        employee.info();
+        employee.toString();
+
         Car car = new Car();
-        car.start();
+        car.toString();
+    }
+
+    public String toString() {
+        System.out.println("Default text.");
+        return null;
     }
 }
