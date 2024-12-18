@@ -1,6 +1,10 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson12.lesson12homework;
 
 public class Car {
+    private String electricity;
+    private String command;
+    private String fuelSystem;
+
     public void start() {
         startElectricity();
         startCommand();
@@ -8,22 +12,21 @@ public class Car {
     }
 
     private void startElectricity() {
-        System.out.println("Start Electricity: completed.");
+        this.electricity = "\nStart Electricity: completed.";
     }
 
     private void startCommand() {
-        System.out.println("Start Command: completed.");
+        this.command = ("\nStart Command: completed.");
     }
 
     private void startFuelSystem() {
-        System.out.println("Start Fuel System: completed.");
+        this.fuelSystem = ("\nStart Fuel System: completed.");
     }
 
     @Override
     public String toString() {
-        startElectricity();
-        startCommand();
-        startFuelSystem();
-        return null;
+        return electricity +
+                command +
+                fuelSystem;
     }
 }
