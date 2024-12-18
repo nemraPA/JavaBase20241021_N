@@ -16,9 +16,4 @@ public class Homework12Runner {
 
         System.out.println(car);
     }
-
-    public String toString() {
-        System.out.println("Default text.");
-        return null;
-    }
 }
