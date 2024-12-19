@@ -6,14 +6,17 @@ public class Homework12Runner {
                 "Hantil Yuriy Vadimovich",
                 "engineer",
                 "age@com.ua",
-                380501234567L,
+                380501234567d,
                 40);
 
-        System.out.println(employee);
+        employee.toString();
 
         Car car = new Car();
-        car.start();
+        car.toString();
+    }
 
-        System.out.println(car);
+    public String toString() {
+        System.out.println("Default text.");
+        return null;
     }
 }
