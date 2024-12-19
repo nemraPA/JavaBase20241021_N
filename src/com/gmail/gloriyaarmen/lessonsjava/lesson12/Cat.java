@@ -23,4 +23,9 @@ public class Cat extends Animal {
         super.describe();
         System.out.println("I'm a " + color + " cat. My name is " + name + ". My age is " + age + ".");
     }
+
+    @Override
+    public void say() {
+        System.out.println("Meow-meow-meow");
+    }
 }

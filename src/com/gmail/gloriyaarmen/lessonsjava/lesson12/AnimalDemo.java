@@ -33,5 +33,4 @@ public class AnimalDemo {
         }
         System.out.println("==========");
     }
-
 }

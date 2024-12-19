@@ -5,9 +5,9 @@ import com.gmail.gloriyaarmen.lessonsjava.lesson13.Hacker;
 
 public class SmartHacker extends Hacker {
 
-    public SmartHacker() {
-        super(null);
-    }
+//    public SmartHacker() {
+//        super(null);
+//    }
 
     public SmartHacker(BankAccount account) {
         super(account);

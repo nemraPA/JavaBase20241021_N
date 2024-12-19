@@ -9,11 +9,11 @@ public class BankAccount {
         this.amount = amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(int amount) { // изменить значение поля
         this.amount = amount;
     }
 
-    public int getAmount() {
+    public int getAmount() {    // получить значение поля
         return amount;
     }
 
@@ -39,5 +39,10 @@ public class BankAccount {
 
     public void info() {
         System.out.println("I have: " + amount);
+    }
+
+    @Override
+    public  String toString() {
+       return "Overrided method) I have: " + amount;
     }
 }

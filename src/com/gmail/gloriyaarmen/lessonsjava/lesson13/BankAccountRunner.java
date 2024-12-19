@@ -15,5 +15,8 @@ public class BankAccountRunner {
         hacker.hack();
         account.info();
         hacker.info();
+
+        System.out.println("-= OBJECT CLASS =-");
+        System.out.println(account);
     }
 }
