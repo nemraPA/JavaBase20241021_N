@@ -1,7 +1,7 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13;
 
 public class BankAccountRunner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         BankAccount account = new BankAccount(42000);
         account.info();
 
@@ -18,5 +18,19 @@ public class BankAccountRunner {
 
         System.out.println("-= OBJECT CLASS =-");
         System.out.println(account);
+
+        BankAccount anotherAccount = new BankAccount(42000);
+//        anotherAccount = account;
+        if (account.equals(anotherAccount)) {
+            System.out.println("Accounts have the same amounts");
+        } else {
+            System.out.println("Not equals");
+        }
+
+        BankAccount clonedAccount = account.clone();
+        clonedAccount.info();
+        if (clonedAccount != account) {
+            System.out.println("Successfuly cloned");
+        }
     }
 }
