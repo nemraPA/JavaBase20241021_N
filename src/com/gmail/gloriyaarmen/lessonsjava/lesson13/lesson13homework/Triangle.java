@@ -1,9 +1,8 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Triangle implements Figures{
+public class Triangle implements Figure {
     private final double[] sides;
 
     public Triangle(double[] sides) {

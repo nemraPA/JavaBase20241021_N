@@ -1,11 +1,11 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
 
-public class Square implements Figures{
-private final double sideValue;
+public class Square implements Figure {
+    private final double sideValue;
 
-public Square(double sideValue) {
-    this.sideValue = sideValue;
-}
+    public Square(double sideValue) {
+        this.sideValue = sideValue;
+    }
 
     public double getSideValue() {
         return sideValue;

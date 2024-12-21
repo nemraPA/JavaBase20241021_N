@@ -1,5 +1,5 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
 
-public interface Figures {
+public interface Figure {
     double area();
 }

@@ -2,7 +2,7 @@ package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
 
 public class Homework13Runer {
     public static void main(String[] args) {
-        Figures[] figures = {
+        Figure[] figures = {
                 new Square(7),
                 new Circle(3),
                 new Triangle(new double[]{5, 8, 7}),
@@ -12,9 +12,9 @@ public class Homework13Runer {
 
     }
 
-    private static double calculateTotalArea(Figures[] figures) {
+    private static double calculateTotalArea(Figure[] figures) {
         double sum = 0;
-        for (Figures figure : figures) {
+        for (Figure figure : figures) {
             sum += figure.area();
         }
         return sum;

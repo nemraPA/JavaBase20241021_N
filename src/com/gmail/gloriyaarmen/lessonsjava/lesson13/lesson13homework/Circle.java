@@ -1,6 +1,6 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
 
-public class Circle implements Figures{
+public class Circle implements Figure {
     private final double radius;
 
     public Circle(double radius) {

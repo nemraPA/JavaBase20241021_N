@@ -15,11 +15,11 @@ public class Lesson10Homework {
         System.out.println("Введіть значення радіус.");
         float definedValueRadius = scanner.nextFloat();
         scanner.nextLine();
-        System.out.println("Введіть значення радіус.");
+        System.out.println("Введіть значення висоти.");
         float definedValueHeight = scanner.nextFloat();
         scanner.nextLine();
-        System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою 10.0 дорівнює  "
-                + cylinderVolume(definedValueRadius, definedValueHeight));
+        System.out.println("Об'єм циліндра з радіусом " + definedValueRadius + " і висотою" + definedValueHeight +
+                 " дорівнює " + cylinderVolume(definedValueRadius, definedValueHeight));
 
         Integer[] array = {10, 20, 30, 40, 50};
         String strArray = Arrays.toString(array);
