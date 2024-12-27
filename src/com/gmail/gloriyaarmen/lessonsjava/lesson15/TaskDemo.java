@@ -39,6 +39,8 @@ public class TaskDemo {
             default -> System.out.println("Unknown  behaviour");
         }
 
+        System.out.println(task.getStatus());
+
 //        task.setStatus(new Task.Status("FAKE STATUS"));   // error! constructor is private
 //        System.out.println("Changed status is: " + task.getStatus());
     }

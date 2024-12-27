@@ -1,14 +1,13 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson15.lesson15homework;
 
-public class DayClass implements DayInterface{
-    private String text;
+public class DayClass {
+    private DayInterface text;
 
-    public DayClass (String text) {
+    public DayClass (DayInterface text) {
         this.text = text;
     }
 
-    @Override
-    public void advise(String text) {
-        this.text = text;
-    }
+
+
+
 }

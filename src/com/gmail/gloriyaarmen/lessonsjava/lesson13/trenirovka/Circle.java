@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
+package com.gmail.gloriyaarmen.lessonsjava.lesson13.trenirovka;
 
 public class Circle implements Figure {
     private final double radius;
@@ -21,5 +21,10 @@ public class Circle implements Figure {
         return "Circle{" +
                 "radius=" + radius +
                 '}';
+    }
+
+    @Override
+    public double getSides(int number) {
+        return number;
     }
 }

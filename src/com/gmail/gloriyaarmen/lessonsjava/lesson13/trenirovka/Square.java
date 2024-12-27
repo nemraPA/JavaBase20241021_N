@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
+package com.gmail.gloriyaarmen.lessonsjava.lesson13.trenirovka;
 
 public class Square implements Figure {
     private final double sideValue;
@@ -21,5 +21,10 @@ public class Square implements Figure {
         return "Square{" +
                 "sideValue=" + sideValue +
                 '}';
+    }
+
+    @Override
+    public double getSides(int number) {
+        return number;
     }
 }

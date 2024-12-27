@@ -22,7 +22,8 @@ public enum Day {
 //            System.out.println(MESSEGE);
 //        }
 //    };
-//private String day;
+
+
 //
 //    Day(String day) {
 //        this.day = day;
@@ -42,4 +43,3 @@ public enum Day {
 //    public void run() {
 //        System.out.println("Running....");
 //    }
-//}

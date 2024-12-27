@@ -1,4 +1,4 @@
-package com.gmail.gloriyaarmen.lessonsjava.lesson13.lesson13homework;
+package com.gmail.gloriyaarmen.lessonsjava.lesson13.trenirovka;
 
 import java.util.Arrays;
 
@@ -7,6 +7,11 @@ public class Triangle implements Figure {
 
     public Triangle(double[] sides) {
         this.sides = sides;//Arrays.copyOf(sides, sides.length);
+    }
+
+    @Override
+    public double getSides(int number) {
+        return sides[number];
     }
 
     @Override
