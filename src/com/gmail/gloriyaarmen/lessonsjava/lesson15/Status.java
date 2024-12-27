@@ -5,6 +5,7 @@ public enum Status implements Runnable {
     IN_PROGRESS(47),
     DONE(1000000) {
         private static final String MESSEGE = "ALL DONE)";
+
         @Override
         public void run() {
             System.out.println(MESSEGE);

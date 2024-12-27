@@ -35,12 +35,8 @@ public class TaskDemo {
         System.out.println("Anover status from String is: " + anoverStatus);
 
         switch (anoverStatus) {
-            case TODO:
-                System.out.println("TODO behaviour");
-                break;
-            default:
-                System.out.println("Unknown  behaviour");
-                break;
+            case IN_PROGRESS -> System.out.println("TODO behaviour");
+            default -> System.out.println("Unknown  behaviour");
         }
 
 //        task.setStatus(new Task.Status("FAKE STATUS"));   // error! constructor is private
