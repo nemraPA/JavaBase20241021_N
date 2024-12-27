@@ -5,7 +5,7 @@ public class Homework13Runer {
         Figure[] figures = {
                 new Square(7),
                 new Circle(3),
-                new Triangle(new double[]{4, 5, 6}),
+                new Triangle(new double[]{4, 6, 9}),
         };
 
         System.out.println(figures[2].getSides(2));
