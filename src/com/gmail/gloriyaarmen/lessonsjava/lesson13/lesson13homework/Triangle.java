@@ -6,7 +6,7 @@ public class Triangle implements Figure {
     private final double[] sides;
 
     public Triangle(double[] sides) {
-        this.sides = sides;//Arrays.copyOf(sides, sides.length);
+        this.sides = Arrays.copyOf(sides, sides.length);
     }
 
     @Override

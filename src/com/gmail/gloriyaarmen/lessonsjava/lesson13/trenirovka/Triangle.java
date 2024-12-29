@@ -3,10 +3,10 @@ package com.gmail.gloriyaarmen.lessonsjava.lesson13.trenirovka;
 import java.util.Arrays;
 
 public class Triangle implements Figure {
-    private final double[] sides;
+    /*public static*/private final double[] sides;
 
     public Triangle(double[] sides) {
-        this.sides = sides;//Arrays.copyOf(sides, sides.length);
+        this.sides = Arrays.copyOf(sides, sides.length);//sides;
     }
 
     @Override

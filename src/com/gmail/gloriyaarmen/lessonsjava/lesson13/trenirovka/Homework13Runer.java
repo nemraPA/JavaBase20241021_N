@@ -3,12 +3,15 @@ package com.gmail.gloriyaarmen.lessonsjava.lesson13.trenirovka;
 public class Homework13Runer {
     public static void main(String[] args) {
         Figure[] figures = {
-                new Square(7),
+                new Square(12),
                 new Circle(3),
                 new Triangle(new double[]{4, 6, 9}),
         };
-
-        System.out.println(figures[2].getSides(2));
+        //System.out.println(Triangle.sides[1] = 7.0);
+        System.out.println(figures[2].getSides(1));
+        for (Figure figure : figures) {
+            System.out.println(figure.toString());
+        }
         //double number = calculatefigures(figures, 1); //getSides(1);
         //System.out.println(number);
 
