@@ -1,6 +1,6 @@
 package com.gmail.gloriyaarmen.lessonsjava.lesson14.trenirovka;
 
-public class CarRanner {
+class PackagePrivateCarRanner {
     public static void main(String[] args) {
 //        Car.Engine engine = new Car.Engine("top engine");
 //        System.out.println(engine);
